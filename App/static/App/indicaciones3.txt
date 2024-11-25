@@ -1,0 +1,52 @@
+1. Portada: Incluir la información de la asignatura y los nombres
+completos de los integrantes del equipo junto con sus respectivos
+códigos.
+Universidad Gerardo Barrios
+Ciclo II-2024
+Facultad: Ciencia y Tecnología
+Asignatura: Programación III
+Actividad: Lab2Computo3 (Tercer Avance)
+Docente: Ing. Willian Alexis Montes Girón
+Estudiantes:    Keila Nallely Canales Núñez SMTR068223
+                Wesly Ariel Umanzor Arias SMTR072723
+                Daniel Osvaldo Ramírez Medrano SMTR075223
+                JAIRO FRANCISCO GARCIA RAIMUNDO SMTR046819
+
+
+2. Resolución del plan de trabajo detallado en el tercer avance:
+Desarrollar las funcionalidades pendientes del proyecto que estén
+alineadas con las descritas en el segundo avance para poder
+implementarlas al proyecto dejando pendientes algunas
+funcionalidades de baja prioridad y ajustes menores.
+Como puede observar la base de datos esta completamente integrada en el proyecto ya que como se
+planteo para este avance, de crear y hacer funcional el registro y inicio de sesion en el proyecto
+ya puede observar que el cliente puede iniciar sesion o registrarse en la pagina web que fue
+una de las funcionalidades que se establecio para este avance.
+tambien ya estan integrados los botnes para que el usuario pueda si asi lo desea editar o eliminar 
+su cita, en el apartado de recordatorios de citas y incluso se le añadio una funcionalidad extra 
+en este avance y es que se le agrego funcionalidad tambien al boton de confirmar cita
+para que el ususario si lo desea puede confirmar la cita que ha reservado y los dueños de la
+clinica lleven un mejor control de los pacientes y de esta manera agilizar sus procesos.
+
+3. Objetivos Faltantes y Plan de Desarrollo: Describir detalladamente
+las funcionalidades y componentes planificados para la entrega
+final. Explicar brevemente cómo se planea desarrollar cada parte
+faltante (tecnologías, métodos o bibliotecas a utilizar) y cómo ha
+cambiado su estado con respecto a la entrega anterior.
+falta agregar la funcionalidad para que el usuario pueda ingresar en las promociones con su 
+cuenta de usuario que anterior mente haya registrado y logeado y de esta manera
+poder observar su codigo de descuento, ademas de agregarle una funcionalidad para que salga de su suario
+como para que se deslogee, De Igual Manera esto lo haremos con los roles de ususarios.
+Agregar stilos a botones que redireccionan a demas plantillas esto para que el usuario tenga una mejor 
+experiencia de navegación para esto utilizaremos css
+el estado a cambiado en un gran porcentaje ya que estableciomos la base de datos al 100% en el proyecto 
+esperado ya que se agregaron de manera correcta las funcionalidades pendientes.
+
+4. Alcance logrado del desarrollo: Describir brevemente sobre cómo
+este avance contribuye al cumplimiento del propósito general del
+proyecto.
+Este avance contribuye de manera eficas y eficiente al proyecto planteado por el equipo 
+de desarrolladores, ya que se han integrado de manera correcta todas las funcionalidades 
+planteadas para el tiempo que se determino siendo asi en porcentaje con un 85% del proyecto
+completo, dejando el 15% restante del proyecto completo para la entrega final, ya que se 
+mejoraran detalles del mismo.

@@ -64,10 +64,6 @@ la cual es sqlite3. Y Lo realizaremos para el tercer avance
 falta que el usuario pueda ingresar en las promociones con su cuenta y de esta manera
 poder observar su codigo de descuento. De Igual Manera esto lo haremos con los roles de ususarios 
 y lo haremos para la presentacion final.
-Agregarle Apartado Tipo Blog. 
-esta funcionalidad la realizaremos con la base de datos local 
-y la realizaremos para la presentación final.
-Agregar 
 Baja:Agregar stilos a botones que redireccionan Y a demas plantillas.
 utilizaremos css y lo haremos para la presentación final.
 
