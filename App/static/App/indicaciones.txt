@@ -1,0 +1,54 @@
+1. Portada: Incluir la información de la asignatura y los nombres
+completos de los integrantes del equipo junto con sus respectivos
+códigos.
+Universidad Gerardo Barrios
+Ciclo II-2024
+Facultad: Ciencia y Tecnología
+Asignatura: Programación III
+Actividad: Lab1Computo3
+Docente: Ing. Willian Alexis Montes Girón
+Estudiantes:    Keila Nallely Canales Núñez SMTR068223
+                Wesly Ariel Umanzor Arias SMTR072723
+                Daniel Osvaldo Ramírez Medrano SMTR075223
+                JAIRO FRANCISCO GARCIA RAIMUNDO SMTR046819
+
+2. Planteamiento del Problema: Describir el problema que el proyecto
+resolverá y cómo se abordará. Explicar brevemente la solución
+propuesta y cómo esta atenderá la problemática identificada.
+Descripción del Proyecto
+El proyecto consiste en el desarrollo de una página web para una clínica médica, cuyo objetivo es ofrecer a los usuarios una plataforma amigable y accesible para obtener información sobre los servicios de la clínica, gestionar citas, consultar sus recordatorios y tener acceso a un portal de promociones en las cuales puedan acceder solo si están registrados. De esta manera, se busca digitalizar y mejorar la interacción entre la clínica y los pacientes, agilizando procesos y facilitando la gestión de la clínica.
+
+3. Funcionalidad Principal: Desarrollar una funcionalidad básica del
+proyecto que esté alineada con la tarea principal a resolver. Esta
+funcionalidad debe ser ejecutable y demostrar cómo el proyecto
+comenzará a abordar el problema planteado, utilizando las
+herramientas necesarias para su implementación.
+La Funcionalidad principal ya esta implementada, y es la pagina de inicio/home donde empezamos a agregar información relacionada con nuestro tema planteado y es de ahí donde sale oh será la raíz para dirigirse a otras páginas, en las cuales ya está funcional la pagina de inicio puesto que ya redirige hacia otras paginas en las cuales el usuario podrá ejecutar sus distintas tareas dependiendo cual sea su necesidad en ese entonces (Usted podrá decir “es ilógico que la funcionalidad principal sea la página home/inicio y no la de loggin/iniciar sesión y es muy comprensible, pero en este caso y por dicha temática especulamos e investigamos que no es el caso, puesto que es un sitio para una clínica y en esos casos los usuarios por un accidente o se encuentren en un muy mal estado de salud y necesitan atención rápida no tendrán la paciencia para estar iniciando sesión, puesto que lo que ellos quieren es atención rápida)
+
+
+
+
+4. Avances del Proyecto: Describir de forma explicativa el progreso
+logrado hasta el momento. Incluir una lista de las funcionalidades
+implementadas, detallando qué partes de la funcionalidad principal
+ya están operativas. Si se han desarrollado avances adicionales,
+incluirlos aquí. Esta sección debe mostrar claramente el estado
+actual del proyecto en relación con la solución del problema.
+El progreso que tenemos logrado hasta el momento son:
+Sistema de gestión de citas en línea:
+Permitirá a los pacientes seleccionar el día, la hora, el tipo de consulta, y reservar citas a través de un calendario interactivo.
+- Portal de pacientes:
+Ofrecerá un espacio donde los pacientes podrán registrarse, acceder a sus historiales
+médicos, revisar resultados de exámenes y modificar sus datos personales.
+- Recordatorio de citas:
+Los pacientes recibirán recordatorios automáticos de sus citas a través en un apartado donde ellos además podrán confirmar su asistencia a su cita agendada.
+- Promociones.  Los pacientes ya pueden ver las promociones que la clínica ofrece, mas no pueden entrar a la función donde se les dará un código, esto porque deberán logearse con su cuenta ya registrada.
+
+5. Objetivos Faltantes y Plan de Desarrollo: Describir en detalle las
+funcionalidades y componentes pendientes en el proyecto,
+indicando el porcentaje de avance estimado. Explicar brevemente
+cómo se planea desarrollar cada parte faltante (tecnologías,
+métodos o bibliotecas a utilizar) y cómo estos elementos
+completarán la funcionalidad del sistema.
+Lo único que falta en nuestro proyecto es agregarle la base de datos a las diferentes paginas ya creadas para que guarde datos y los pueda mostrar a los usuarios, en el apartado de las promociones usaremos el sistema de autenticación en Django django.contrib.auth el cual es para darle la lógica que pueda ver si esta logeado poder darle su código de promoción, también se nos ocurrió crear un apartado que sea como un blog donde los usuarios puedan dar las reseñas de las consultas etc. Ya que esto generaría un mayor impacto y confianza a los usuarios 
+Consideramos que el porcentaje en avance que falta es del 45% ya que las vistas y urls ya están listas, solo falta integrar la base de datos y generar un apartado más.

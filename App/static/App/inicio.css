@@ -1,0 +1,53 @@
+/* Estilos para la página de inicio */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    color: #004085;
+}
+
+/* Estilos para las tarjetas de servicios */
+.service-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #bda9ec;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section {
+    background-color: #ffffff ;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h4 {
+    color: #004085;
+}
+
+.service-card p {
+    margin: 10px 0;
+}
+
+/* Efecto de animación al pasar el mouse sobre la tarjeta */
+.service-card:hover {
+    transform: scale(1.05); /* Agranda ligeramente la tarjeta */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+/* Estilos para los iconos de beneficios */
+.icon {
+    font-size: 3em;
+    color: #004085;
+    margin-bottom: 10px;
+}
+

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Editar Reservación{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Editar Reservación</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="form-group mb-3">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" value="{{ reserva.nombre }}" class="form-control" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" value="{{ reserva.correo }}" class="form-control" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" value="{{ reserva.telefono }}" class="form-control" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" value="{{ reserva.fecita }}" class="form-control" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" value="{{ reserva.hora }}" class="form-control" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="ampm">AM/PM:</label>
+            <select id="ampm" name="ampm" class="form-control" required>
+                <option value="AM" {% if reserva.ampm == "AM" %}selected{% endif %}>AM</option>
+                <option value="PM" {% if reserva.ampm == "PM" %}selected{% endif %}>PM</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="servicio">Servicio:</label>
+            <select id="servicio" name="servicio" class="form-control" required>
+                <option value="consulta" {% if reserva.servicio == "consulta" %}selected{% endif %}>Consulta General</option>
+                <option value="seguimiento" {% if reserva.servicio == "seguimiento" %}selected{% endif %}>Seguimiento</option>
+                <option value="evaluacion" {% if reserva.servicio == "evaluacion" %}selected{% endif %}>Evaluación</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+    </form>
+</div>
+{% endblock %}

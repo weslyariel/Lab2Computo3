@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Pagina De Promociones{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'App/promociones.css' %}">
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Promociones Especiales - Clínica Salud Vida</h1>
+    <p>¡Aprovecha nuestros descuentos y cuida tu salud!</p>
+</header>
+
+<!-- Contenedor de promociones -->
+<div class="promo-container">
+    <!-- Promoción 1 -->
+    <div class="promo-card">
+        <img src="{% static 'App/ChequeoGeneral.png' %}" alt="Chequeo General">
+        <div class="promo-content">
+            <h3>Chequeo General</h3>
+            <p>Precio especial: <strong>$50</strong></p>
+            <p>Incluye análisis de sangre, presión arterial y más.</p>
+            <a href="#" class="promo-button">Ver Detalles</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- Promoción 2 -->
+    <div class="promo-card">
+        <img src="{% static 'App/examenVista.jpg' %}" alt="Examen de Vista">
+        <div class="promo-content">
+            <h3>Examen de Vista</h3>
+            <p>¡Primera consulta gratuita!</p>
+            <p>Examen completo y asesoría personalizada.</p>
+            <a href="#" class="promo-button">Ver Detalles</a>
+            <br>
+            <br>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- Promoción 3 -->
+    <div class="promo-card">
+        <img src="{% static 'App/vacunas.png' %}" alt="Descuento en Vacunas">
+        <br>
+        <div class="promo-content">
+            <h3>Descuento en Vacunas</h3>
+            <p>Hasta un 30% de descuento en vacunas seleccionadas.</p>
+            <p>Protege tu salud y la de tu familia.</p>
+            <a href="#" class="promo-button">Ver Detalles</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

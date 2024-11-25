@@ -1,0 +1,73 @@
+1. Portada: Incluir la información de la asignatura y los nombres
+completos de los integrantes del equipo junto con sus respectivos
+códigos.
+Universidad Gerardo Barrios
+Ciclo II-2024
+Facultad: Ciencia y Tecnología
+Asignatura: Programación III
+Actividad: Lab1Computo3 (Segundo Avance)
+Docente: Ing. Willian Alexis Montes Girón
+Estudiantes:    Keila Nallely Canales Núñez SMTR068223
+                Wesly Ariel Umanzor Arias SMTR072723
+                Daniel Osvaldo Ramírez Medrano SMTR075223
+                JAIRO FRANCISCO GARCIA RAIMUNDO SMTR046819
+
+2. Establecimiento de prioridades: A partir de las funcionalidades
+pendientes establecer aquellas que tienen alta, media y baja
+prioridad.
+Las  prioridades de las funcionalidades que nosotros como grupo de desarrolladores 
+que establecimos son:
+Alta: Integrarle La Base de datos a el apartado de reservaciones para que el usuario ya pueda reservar 
+su cita y que la base de datos guarde esos datos.
+Integrarle la base de datos a el apartado de recordatorios para que el usuario pueda gestionar(por el 
+momento ver) las citas que tiene pendiente, esto apartir de los datos que se reciban en el apartado de reservacion de cita.
+Tambien agregar de manera correcta cada url para que el usuario al momento de ingresar al apartado que desee
+lo lleve concretamente al area que desea visitar y no lo direccione de mala manera, esto para 
+que el usuario no tenga una mala experiencia al momento de usar el sitio (ya que al momento de un accdicente
+ellos desean un servicio concreto y una mala gestion podria hacerlos buscar por otros medios)
+media: integrarle la base de datos al login y registro, para que el usuario pueda logearse y la empresa tenga un
+mejor control.
+Baja: Agregar botones que los regresen para las paginas anteriores o a la de inicio
+esto para que los usuarios tengan otra opcion adicional en cada apartado para poder movilizarse dentro del sitio
+
+3. Resolución del plan de trabajo detallado en el segundo avance:
+Desarrollar las funcionalidades pendientes del proyecto que estén
+alineadas con las descritas en el primer avance y que estén
+marcadas como de alta prioridad para poder implementarlas al
+proyecto.
+Como se puede observar en el proyecto ya esta 100% implementada la base de datos para el apartado de
+reservaciones(ya que el usuario ya puede ingresar sus diferentes tipos de datos para reservar su cita)
+tambien ya esta 100% ejecutable la importación de los datos que envia el usuario al servidor, el cual esta exportada para 
+el apartado de recordatorios, para que el usuario en caso de que no recuerde ningun dato de su cita 
+como dia oh hora, pues ya lo podra ver y estar al tanto.
+Tambien la pagina ya esta navegable y sin errores en direcciones url y de esta manera el usuario 
+al momento de clickiar en algun apartado lo lleva al que es y no se pierde en la navegacion.
+De igual manera cada boton ya esta habilitado de manera correcta.
+
+4. Objetivos Faltantes y Plan de Desarrollo: Describir detalladamente
+las funcionalidades y componentes planificados para el tercer
+avance y la entrega fina. Explicar brevemente cómo se planea
+desarrollar cada parte faltante (tecnologías, métodos o bibliotecas a
+utilizar) y cómo ha cambiado su estado con respecto a la entrega
+anterior.
+Las funcionalidades que faltan unicamente son:
+Alta:
+agregarle los botones al apartado de recordatorios en sus citas pendientes para que el usuario si 
+lo desea pueda eliminar/editar su cita.
+Esto lo haremos con la base de datos local la que ya estamos utilizando
+la cual es sqlite3. Y Lo realizaremos para el tercer avance para que el usuario ya pueda 
+realizar ediciones oh eliminar su cita
+Media: 
+Agregarle El Inicio De Sesión/Registrarse (Esto mas que todo para que la clinica tenga un mejor control
+de sus usuarios/pacientes) Esto lo haremos con la base de datos local la que ya estamos utilizando
+la cual es sqlite3. Y Lo realizaremos para el tercer avance
+falta que el usuario pueda ingresar en las promociones con su cuenta y de esta manera
+poder observar su codigo de descuento. De Igual Manera esto lo haremos con los roles de ususarios 
+y lo haremos para la presentacion final.
+Agregarle Apartado Tipo Blog. 
+esta funcionalidad la realizaremos con la base de datos local 
+y la realizaremos para la presentación final.
+Agregar 
+Baja:Agregar stilos a botones que redireccionan Y a demas plantillas.
+utilizaremos css y lo haremos para la presentación final.
+

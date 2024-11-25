@@ -1,0 +1,23 @@
+body {
+    background-color: #78acdd; /* Color de fondo claro */
+}
+
+.container {
+    background-color: #dbd6d6;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 30px; /* Margen superior para separar del borde superior */
+}
+
+h2 {
+    text-align: center; /* Centrar el título */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espacio entre los campos del formulario */
+}
+
+.btn {
+    width: 100%; /* Botón ocupa el ancho completo del contenedor */
+}

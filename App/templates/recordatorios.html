@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Pagina De Recordatorios{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'App/recordatorios.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Encabezado de la página -->
+<header class="text-center my-4">
+    <h1>Recordatorio de Cita Médica</h1>
+    <p>Recuerda tu próxima cita en la Clínica Salud Vida</p>
+</header>
+
+<!-- Contenedor del recordatorio -->
+<div class="container">
+    {% for reserva in reservaciones %}
+    <div class="recordatorio-card">
+        <img src="{% static 'App/recordatorio.jpg' %}" alt="Doctor en la clínica" class="recordatorio-img">
+        <div class="recordatorio-content">
+            <h3>Detalles de tu Cita</h3>
+            <p><strong>Paciente:</strong> {{ reserva.nombre }}</p>
+            <p><strong>Correo:</strong> {{ reserva.correo }}</p>
+            <p><strong>Teléfono:</strong> {{ reserva.telefono }}</p>
+            <p><strong>Fecha:</strong> {{ reserva.fecita }}</p>
+            <p><strong>Hora:</strong> {{ reserva.hora }} {{ reserva.ampm }}</p>
+            <p><strong>Servicio:</strong> {{ reserva.servicio }}</p>
+            <p><strong>Nota:</strong> Por favor, llega 10 minutos antes para estar a tiempo y no perder tu turno.</p>
+            <p><strong>Estado:</strong> 
+                {% if reserva.confirmada %}
+                    <span style="color: green;">Asistencia Confirmada</span>
+                {% else %}
+                    <span style="color: red;">Pendiente de Confirmar</span>
+                {% endif %}
+            </p>
+            {% if not reserva.confirmada %}
+                <a href="{% url 'confirmar_asistencia' reserva.id %}" class="btn btn-success">
+                    Confirmar Asistencia
+                </a>
+            {% endif %}
+        </div>
+        <div class="actions">
+            <a href="{% url 'editar_reservacion' reserva.id %}" class="btn btn-warning">Editar</a>
+            <a href="{% url 'eliminar_reservacion' reserva.id %}" class="btn btn-danger" 
+               onclick="return confirm('¿Estás seguro de que deseas eliminar esta cita?');">Eliminar</a>
+        </div>
+    </div>
+    {% endfor %}
+    <div>
+        <h3>Deseo volver al inicio</h3>
+        <a href="{% url 'inicio' %}" class="btn btn-primary" style="padding: 5px 10px; font-size: 12px; width: auto;">Ir A Inicio</a>
+        <br><br>
+        <h3>No tengo cita y deseo reservarla</h3>
+        <a href="{% url 'reservacion' %}" class="btn btn-primary" style="padding: 5px 10px; font-size: 12px; width: auto;">Reservar cita</a>
+        <br><br>
+    </div>
+</div>
+{% endblock %}

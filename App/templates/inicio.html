@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Pagina Iniciar Sesion{% endblock %}
+
+{% block extra_styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'App/inicio.css' %}">
+{% endblock %}
+
+{% block content %}
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+ <!-- Sección de bienvenida -->
+ <section class="container mt-5">
+    <h2 class="text-center mb-4">Conoce Nuestros Servicios</h2>
+    <p class="text-center">En Clínica Salud Vida, ofrecemos una variedad de servicios médicos para cuidar de ti y tu familia.</p>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="service-card">
+                <h4>Promociones de Salud</h4>
+                <p>Aprovecha nuestras promociones en consultas y tratamientos. Haz clic para conocer más.</p>
+                <a href="{% url 'promociones' %}" class="btn btn-primary">Ver Promociones</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="service-card">
+                <h4>Reservación de Citas</h4>
+                <p>Agenda tu cita con nosotros en línea de manera rápida y sencilla.</p>
+                <br>
+                <a href="{% url 'reservacion' %}" class="btn btn-primary">Reservar Cita</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="service-card">
+                <h4>Recordatorios</h4>
+                <p>Ya tienes tu cita reservada?
+                    <br>
+                    es buen momento para que nos confirmes tu asistencia.
+                    Hazlo rapido y sencillo</p>
+                <a href="{% url 'recordatorios' %}" class="btn btn-primary">Ir A Recordatorios</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="service-card">
+                <h4>Inicia Sesion</h4>
+                <p>inicia sesion o registrate con nosotros para tener mejores 
+                    beneficios y observar tu historial.</p>
+                    <br>
+                <a href="{% url 'index' %}" class="btn btn-primary">Registrarme/Iniciar Sesion</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de beneficios -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">¿Por qué elegirnos?</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <i class="fas fa-user-md icon"></i>
+            <h5>Médicos Calificados</h5>
+            <p>Contamos con un equipo de profesionales de la salud altamente capacitado.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="fas fa-hands-helping icon"></i>
+            <h5>Atención Personalizada</h5>
+            <p>Nos esforzamos en ofrecer un trato cercano y personalizado a cada paciente.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="fas fa-clock icon"></i>
+            <h5>Disponibilidad</h5>
+            <p>Ofrecemos horarios flexibles para adaptarnos a tus necesidades.</p>
+        </div>
+    </div>
+
+    <!-- Texto adicional sobre la clínica -->
+    <div class="about-section hidden mt-5">
+        <h2 class="text-center">Conoce más sobre nosotros</h2>
+        <p class="text-center">En Clínica Saludable, nos dedicamos a proporcionar servicios de salud integrales y de calidad para cuidar a nuestros pacientes.</p>
+        <p>Contamos con un equipo de profesionales altamente capacitados y comprometidos en diversas áreas de la salud, desde medicina general hasta especialidades en pediatría, cardiología, dermatología y más. Estamos aquí para ayudarte a mejorar tu calidad de vida, ofreciendo un trato humano, respetuoso y personalizado.</p>
+
+        <h3>Beneficios de elegir Clínica Saludable:</h3>
+        <br>
+        <img src="{% static 'App/beneficios.png' %}" alt="Beneficios">
+        <ul>
+            <li>Atención médica personalizada</li>
+            <li>Equipos de última tecnología</li>
+            <li>Personal médico con amplia experiencia</li>
+            <li>Servicios de urgencias 24/7</li>
+            <li>Promociones exclusivas en tratamientos preventivos</li>
+        </ul>
+
+        <h3>Nuestros Valores:</h3>
+        <p>En Clínica Saludable nos regimos por principios fundamentales que garantizan un servicio ético y de calidad:</p>
+        <br>
+        <img src="{% static 'App/valores.png' %}" alt="valores">
+        <ol>
+            <li><strong>Integridad:</strong> Actuamos de forma ética en cada consulta y servicio que ofrecemos.</li>
+            <li><strong>Empatía:</strong> Entendemos tus necesidades y trabajamos para ofrecerte el mejor cuidado.</li>
+            <li><strong>Profesionalismo:</strong> Nuestro personal está en constante formación y se esfuerza por alcanzar la excelencia.</li>
+            <li><strong>Innovación:</strong> Mantenemos nuestras instalaciones con la última tecnología médica.</li>
+            <li><strong>Compromiso:</strong> Tu salud es nuestra razón de ser, y nos dedicamos a mejorar tu bienestar en cada visita.</li>
+        </ol>
+
+        <p class="mt-4">Agradecemos tu confianza en Clínica Saludable. Esperamos ser tus aliados en el cuidado de tu salud y de la de tus seres queridos. ¡Agenda tu cita con nosotros hoy y descubre una nueva experiencia en atención médica!</p>
+    </div>
+</div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const aboutSection = document.querySelector('.about-section');
+
+    function handleScroll() {
+        const sectionPosition = aboutSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3; // Ajusta el valor según el momento de la animación
+
+        if (sectionPosition < screenPosition) {
+            aboutSection.classList.add('visible');
+            window.removeEventListener('scroll', handleScroll); // Elimina el evento una vez ejecutada la animación
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+});
+</script>
+{% endblock %}
