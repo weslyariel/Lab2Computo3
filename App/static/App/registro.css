@@ -6,12 +6,12 @@
 }
 
 body {
-    background-color: dodgerblue;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 123, 255, 0.6)), url('/static/images/login-bg.jpg') no-repeat center center fixed;
     height: 100vh; /* Mantiene el fondo azul ocupando toda la altura */
 }
 
 .container {
-    background-color: #666464;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
     border-radius: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -27,6 +27,13 @@ body {
 h2 {
     margin-bottom: 20px;
     color: #f1eeee;
+}
+.mt-3 {
+    color: white /* Cambia el color para todo el texto */
+}
+
+.mt-3 a {
+    color: #004aad; /* Mantén un color diferente para el enlace */
 }
 
 .form-group {
