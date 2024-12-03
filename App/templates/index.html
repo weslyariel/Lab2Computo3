@@ -9,18 +9,10 @@
 
 {% block content %}
 <br>
+<br>
+<br>
 <div class="container">
   <h2>Formulario de Registro De Usuario</h2>
-    <!-- Mostrar mensajes de error o éxito -->
-    {% if messages %}
-        <div class="alert alert-info">
-            <ul>
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    {% endif %}
   <form method="post">
       {% csrf_token %}
       <div class="form-group">

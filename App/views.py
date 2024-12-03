@@ -7,10 +7,11 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
+from django.core.exceptions import ValidationError
 
 
 # Create your views here.
-
+@login_required
 def index(request):
     return render(request,"inicio.html")
 
@@ -26,20 +27,34 @@ def postreservacion(request):
     tel = request.POST.get('telefono')
     fech = request.POST.get('fecha')
     hor = request.POST.get('hora')
-    amp = request.POST.get('ampm')
     servici = request.POST.get('servicio')
 
+    # Si el usuario está logeado, guarda la cita con su usuario
+    if request.user.is_authenticated:
+        usuario = request.user
+    else:
+        # Si no está logeado, no se asocia un usuario
+        usuario = None
+
+    #if not tel.isdigit():
+     #   messages.error(request, "El número de teléfono debe contener solo dígitos.")
+      #  return redirect('reservacion')  # Redirige de vuelta al formulario
+
     models.reservacion.objects.create(
+        usuario=usuario,  # Aquí asociamos al usuario
         nombre = nom,
         correo = corr,
         telefono = tel,
         fecita = fech,
         hora = hor,
-        ampm = amp,
         servicio = servici
     )
-
-    return redirect('index')
+    if request.user.is_authenticated:
+        messages.success(request, "Reservación guardada exitosamente.")
+        return redirect('inicio')  # Redirige a la página "inicio" si el usuario está logeado
+    else:
+        messages.success(request, "Reservación guardada exitosamente. Por favor, inicia sesión para acceder a más funcionalidades.")
+        return redirect('index') # Redirige a la página de registro si no está autenticado
 
 def editar_reservacion(request, id):
     reserva = reservacion.objects.get(id=id)
@@ -50,9 +65,9 @@ def editar_reservacion(request, id):
         reserva.telefono = request.POST.get('telefono')
         reserva.fecita = request.POST.get('fecha')
         reserva.hora = request.POST.get('hora')
-        reserva.ampm = request.POST.get('ampm')
         reserva.servicio = request.POST.get('servicio')
         reserva.save()
+        messages.success(request, "Reservación actualizada exitosamente.")
         return redirect('recordatorios')
     
     return render(request, 'editar_reservacion.html', {'reserva': reserva})
@@ -71,13 +86,14 @@ def confirmar_asistencia(request, reserva_id):
     # Redirigir al usuario nuevamente a los recordatorios
     return redirect('recordatorios')
 
-
+@login_required
 def promociones(request):
     return render(request,"promociones.html")
 
+@login_required
 def recordatorios(request):
-    # Obtener todas las reservaciones
-    reservaciones = reservacion.objects.all()
+    # Filtra las reservaciones solo para el usuario autenticado
+    reservaciones = reservacion.objects.filter(usuario=request.user)
     # Pasar las reservaciones al contexto
     return render(request, "recordatorios.html", {"reservaciones": reservaciones})
     #return render(request,"recordatorios.html")

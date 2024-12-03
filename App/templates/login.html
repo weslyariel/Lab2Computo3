@@ -1,4 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Iniciar Sesion{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'App/login.css' %}">
+{% endblock %}
 {% block content %}
 <div class="container mt-4">
     <h2>Inicio de Sesión</h2>

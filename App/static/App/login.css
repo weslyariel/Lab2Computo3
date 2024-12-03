@@ -1,0 +1,75 @@
+/* Fondo difuminado */
+body {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 123, 255, 0.6)), url('/static/images/login-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* Estilos para el contenedor del formulario */
+.container {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); /* Difuminado del fondo */
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los campos del formulario */
+.form-group label {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Botón de inicio de sesión */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del enlace de registro */
+p {
+    text-align: center;
+    color: #ccc;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
